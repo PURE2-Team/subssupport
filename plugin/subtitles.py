@@ -193,7 +193,7 @@ def getEmbeddedFontSizeCfg(defaultFontSizeCfg):
 GLOBAL_CONFIG_INIT = False
 
 fontChoiceList = [f for f in getFonts()]
-fontSizeChoiceList = [("%d" % i, "%d px" % i) for i in range(10, 60, 1)]
+fontSizeChoiceList = [("%d" % i, "%d px" % i) for i in range(10, 80, 1)]
 positionChoiceList = [("0", _("top"))]
 positionChoiceList.extend([("%d" % i, "%d %%" % i) for i in range(1, 100, 1)])
 positionChoiceList.append(("100", _("bottom")))
