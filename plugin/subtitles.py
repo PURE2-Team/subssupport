@@ -1797,12 +1797,22 @@ class PanelList(MenuList):
     def __init__(self, list, height=30):
         MenuList.__init__(self, list, False, eListboxPythonMultiContent)
         self.l.setItemHeight(height)
-        self.l.setFont(0, gFont("Regular", 20))
-        self.l.setFont(1, gFont("Regular", 17))
+        if isFullHD():
+            font0=27
+            font1=21
+        else:
+            font0=20
+            font1=17
+        self.l.setFont(0, gFont("Regular", font0))
+        self.l.setFont(1, gFont("Regular", font1))
 
 def PanelListEntry(name, mode):
     res = [(name, mode)]
-    res.append(MultiContentEntryText(pos=(5, 5), size=(330, 25), font=0, flags=RT_VALIGN_CENTER, text=name))
+    if isFullHD():
+        y=35
+    else:
+        y=25
+    res.append(MultiContentEntryText(pos=(5, 5), size=(330, y), font=0, flags=RT_VALIGN_CENTER, text=name))
     return res
 
 def PanelColorListEntry(name, value, colorName, colorValue, sizePanelX):
