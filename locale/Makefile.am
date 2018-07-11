@@ -21,5 +21,4 @@ install-data-am:
 	for lang in $(LANGS) ; do \
 		mkdir -p $(DESTDIR)$(installdir)/locale/$$lang/LC_MESSAGES; \
 		cp $$lang.mo $(DESTDIR)$(installdir)/locale/$$lang/LC_MESSAGES/$(DOMAIN).mo; \
-		cp $$lang.po $(DESTDIR)$(installdir)/locale/$$lang/LC_MESSAGES/$$lang.po; \
 	done
