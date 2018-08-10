@@ -322,7 +322,8 @@ def initSearchSettings(configsubsection):
     configsubsection.season = ConfigInteger(default=0, limits=(0, 100))
     configsubsection.episode = ConfigInteger(default=0, limits=(0, 100))
     configsubsection.provider= ConfigSelection(default="all", choices=[("all", _("All")), ])
-    configsubsection.useFilePath = ConfigYesNo(default=True)
+    #configsubsection.useFilePath = ConfigYesNo(default=True)
+    configsubsection.useFilePath = ConfigYesNo(default=False)
     
 
 def initSubsSettings(configSubsection=None):
