@@ -311,9 +311,11 @@ def initSearchSettings(configsubsection):
     configsubsection.saveAsFallback = ConfigSelection(default='version', choices=[('default', _("Default")), ('version', _("Release"))])
     configsubsection.saveTo = ConfigSelection(default='custom', choices=[('custom', _('User defined')), ('video', _('Next to video'))])
     configsubsection.addLangToSubsFilename = ConfigYesNo(default=False)
-    configsubsection.askOverwriteExistingSubs = ConfigYesNo(default=True)
+    #configsubsection.askOverwriteExistingSubs = ConfigYesNo(default=True)
+    configsubsection.askOverwriteExistingSubs = ConfigYesNo(default=False)
     configsubsection.loadSubtitlesAfterDownload = ConfigYesNo(default=True)
-    configsubsection.openParamsDialogOnSearch = ConfigYesNo(default=True)
+    #configsubsection.openParamsDialogOnSearch = ConfigYesNo(default=True)
+    configsubsection.openParamsDialogOnSearch = ConfigYesNo(default=False)
     configsubsection.showProvidersErrorMessage = ConfigYesNo(default=True)
     # session settings
     configsubsection.title = ConfigTextWithSuggestionsAndHistory(configsubsection.history, default="", fixed_size=False)
