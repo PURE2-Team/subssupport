@@ -3,7 +3,7 @@ installdir = ${libdir}/enigma2/python/Plugins/Extensions/$(DOMAIN)
 
 MSGFMT = msgfmt
 
-LANGS = bg cs de es et hr it lt pl pt ru sk uk
+LANGS = ar bg cs de es et fr hr it lt pl pt ru sk uk
 LANGPO = $(LANGS:=.po)
 LANGMO = $(LANGS:=.mo)
 
@@ -21,4 +21,5 @@ install-data-am:
 	for lang in $(LANGS) ; do \
 		mkdir -p $(DESTDIR)$(installdir)/locale/$$lang/LC_MESSAGES; \
 		cp $$lang.mo $(DESTDIR)$(installdir)/locale/$$lang/LC_MESSAGES/$(DOMAIN).mo; \
+		cp $$lang.po $(DESTDIR)$(installdir)/locale/$$lang/LC_MESSAGES/$$lang.po; \
 	done

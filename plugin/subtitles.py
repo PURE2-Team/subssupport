@@ -307,14 +307,12 @@ def initSearchSettings(configsubsection):
     configsubsection.tvshowProvider = ConfigSelection(default="all", choices=[("all", _("All")), ])
     configsubsection.manualSearch = ConfigYesNo(default=False)
     configsubsection.defaultSort = ConfigSelection(default='lang', choices=[('lang', _("Language")), ('provider', _("Provider"))])
-    configsubsection.saveAs = ConfigSelection(default='version', choices=[('default', _("Default")), ('version', _("Release")), ('video', _("Video filename"))])
+    configsubsection.saveAs = ConfigSelection(default='video', choices=[('default', _("Default")), ('version', _("Release")), ('video', _("Video filename"))])
     configsubsection.saveAsFallback = ConfigSelection(default='version', choices=[('default', _("Default")), ('version', _("Release"))])
     configsubsection.saveTo = ConfigSelection(default='custom', choices=[('custom', _('User defined')), ('video', _('Next to video'))])
     configsubsection.addLangToSubsFilename = ConfigYesNo(default=False)
-    #configsubsection.askOverwriteExistingSubs = ConfigYesNo(default=True)
     configsubsection.askOverwriteExistingSubs = ConfigYesNo(default=False)
     configsubsection.loadSubtitlesAfterDownload = ConfigYesNo(default=True)
-    #configsubsection.openParamsDialogOnSearch = ConfigYesNo(default=True)
     configsubsection.openParamsDialogOnSearch = ConfigYesNo(default=False)
     configsubsection.showProvidersErrorMessage = ConfigYesNo(default=True)
     # session settings
@@ -324,8 +322,7 @@ def initSearchSettings(configsubsection):
     configsubsection.season = ConfigInteger(default=0, limits=(0, 100))
     configsubsection.episode = ConfigInteger(default=0, limits=(0, 100))
     configsubsection.provider= ConfigSelection(default="all", choices=[("all", _("All")), ])
-    #configsubsection.useFilePath = ConfigYesNo(default=True)
-    configsubsection.useFilePath = ConfigYesNo(default=False)
+    configsubsection.useFilePath = ConfigYesNo(default=True)
     
 
 def initSubsSettings(configSubsection=None):
