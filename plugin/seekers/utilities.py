@@ -18,9 +18,7 @@ def log(module,msg):
     else: print module, msg
 
 LANGUAGES      = (
-
     # Full Language name[0]     podnapisi[1]  ISO 639-1[2]   ISO 639-1 Code[3]   Script Setting Language[4]   localized name id number[5]
-
     ("Albanian"                   , "29",       "sq",            "alb",                 "0",                     30201  ),
     ("Arabic"                     , "12",       "ar",            "ara",                 "1",                     30202  ),
     ("Belarusian"                 , "0" ,       "hy",            "arm",                 "2",                     30203  ),

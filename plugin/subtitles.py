@@ -1070,12 +1070,13 @@ class SubsSupport(SubsSupportEmbedded):
                 warningMessage(self.session, _("Cannot decode subtitles. Try another encoding group"))
             return None, None
         except ParserNotFoundError:
-            if showMessages:
-                warningMessage(self.session, _("Cannot parse subtitles. Not supported subtitles format"))
+            # if showMessages:
+                # warningMessage(self.session, _("Cannot parse subtitles. Not supported subtitles format"))
             return None, None
         except ParseError:
-            if showMessages:
-                warningMessage(self.session, _("Cannot parse subtitles. Invalid subtitles format"))
+			#FOR NOW REMOVE ERROR MSG
+            # if showMessages:
+                # warningMessage(self.session, _("Cannot parse subtitles. Invalid subtitles format"))
             return None, None
         finally:
             self.__firstStart = False
@@ -1864,8 +1865,8 @@ class SubsMenu(Screen):
 
         self["title_label"] = Label(_("Currently choosed subtitles"))
         self["subfile_label"] = Label("")
-        self["subfile_list"] = PanelList([], 25)
-        self["menu_list"] = PanelList([], 28)
+        self["subfile_list"] = PanelList([], 32)
+        self["menu_list"] = PanelList([], 35)
         self["copyright"] = Label("")
         # self["copyright"] = Label("created by %s <%s>"%(__author__,__email__))
         self["actions"] = ActionMap(["SetupActions"],
