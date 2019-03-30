@@ -407,13 +407,13 @@ msgid "Preferred languages"
 msgstr "Odabrani jezici"
 
 msgid "Preferred Movie provider"
-msgstr "Favorizirani opskrbljivač filmova"
+msgstr "Favorizirani provajder filmova"
 
 msgid "Preferred subtitles language"
 msgstr "Preferirani jezik podnaslova"
 
 msgid "Preferred TV show provider"
-msgstr "Favorizirani opskrbljivač TV emisija"
+msgstr "Favorizirani provajder TV emisija"
 
 msgid "press green"
 msgstr "Stisni zeleno"
@@ -428,10 +428,10 @@ msgid "press red"
 msgstr "Stisni crveno"
 
 msgid "Provider"
-msgstr "Opskrbljivač"
+msgstr ""
 
 msgid "Provider name"
-msgstr "Ime opskrbljivača"
+msgstr "Ime provajdera"
 
 msgid "PTS check delay"
 msgstr "PTS provjera zaostatka"
@@ -446,7 +446,7 @@ msgid "Refresh delay"
 msgstr "Obnovi zaostatak"
 
 msgid "Release"
-msgstr "Otpusti"
+msgstr "Izdavač"
 
 msgid "Remove (file)"
 msgstr "Obriši (datoteku)"
@@ -578,7 +578,7 @@ msgid "skip to previous subtitle (minute jump)"
 msgstr "Preskoči u prethodni podnaslov (minutni skok)"
 
 msgid "Some subtitles providers are not working"
-msgstr "Neki opskrbljivači podnaslovima ne rade"
+msgstr "Neki provajderi podnaslovima ne rade"
 
 msgid "Sort subtitles list by"
 msgstr "Uredi listu podnaslova po"
@@ -623,7 +623,7 @@ msgid "Subtitles Position"
 msgstr "Pozicija podnaslova"
 
 msgid "Subtitles provider timeout"
-msgstr "Timeout prikaza opskrbljivača podnaslova"
+msgstr "Timeout prikaza provajdera"
 
 msgid "Subtitles search"
 msgstr "Pretraga podnaslova"
