@@ -1811,7 +1811,8 @@ class PanelList(MenuList):
         MenuList.__init__(self, list, False, eListboxPythonMultiContent)
         self.l.setItemHeight(height)
         if isFullHD():
-            font0=27
+            #font0=27
+            font0=28              #DODANO
             font1=21
         else:
             font0=20
@@ -2237,18 +2238,20 @@ class SubsSetupGeneral(BaseMenuScreen):
 def FileEntryComponent(name, absolute=None, isDir=False):
     res = [ (absolute, isDir) ]
     if isFullHD():
-        res.append((eListboxPythonMultiContent.TYPE_TEXT, 35, 1, 770, 30, 1, RT_HALIGN_LEFT, toString(name)))
+        #res.append((eListboxPythonMultiContent.TYPE_TEXT, 35, 1, 770, 30, 1, RT_HALIGN_LEFT, toString(name)))
+        res.append((eListboxPythonMultiContent.TYPE_TEXT, 48, 5, 1200, 48, 1, RT_HALIGN_LEFT, toString(name)))         #DODANO
     else:
-        res.append((eListboxPythonMultiContent.TYPE_TEXT, 35, 1, 570, 30, 0, RT_HALIGN_LEFT, toString(name)))
+        res.append((eListboxPythonMultiContent.TYPE_TEXT, 35, 5, 570, 30, 0, RT_HALIGN_LEFT, toString(name)))
     if isDir:
         png = LoadPixmap(resolveFilename(SCOPE_SKIN_IMAGE, "extensions/directory.png"))
     else:
         png = LoadPixmap(os.path.join(os.path.dirname(__file__), 'img', 'subtitles.png'))
     if png is not None:
-        res.append((eListboxPythonMultiContent.TYPE_PIXMAP_ALPHATEST, 10, 2, 20, 20, png))
+        if isFullHD():         #DODANO
+            res.append((eListboxPythonMultiContent.TYPE_PIXMAP_ALPHATEST, 10, 10, 38, 38, png))         #DODANO
+        else:         #DODANO
+            res.append((eListboxPythonMultiContent.TYPE_PIXMAP_ALPHATEST, 10, 2, 20, 20, png))
     return res
-
-
 
 # TODO rework so there is one general SubtitlesChooser, where we can quickly
 # switch between different views(search, embedded, external, history..), i.e
@@ -2261,9 +2264,11 @@ class SubFileList(FileList):
             extensions += list(parser.parsing)
         FileList.__init__(self, defaultDir, matchingPattern="(?i)^.*\." + '(' + '|'.join(ext[1:] for ext in extensions) + ')', useServiceRef=False)
         self.l.setFont(0, gFont("Regular", 18))
-        self.l.setFont(1, gFont("Regular", 27))
+        #self.l.setFont(1, gFont("Regular", 27))
+        self.l.setFont(1, gFont("Regular", 29))       #DODANO
         if isFullHD():
-            self.l.setItemHeight(35)
+            #self.l.setItemHeight(35)
+            self.l.setItemHeight(48)                   #DODANO
         else:
             self.l.setItemHeight(23)
 

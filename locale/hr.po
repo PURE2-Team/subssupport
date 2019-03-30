@@ -2,15 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SubsSupport _ enigma2-plugin by mx3L\n"
 "POT-Creation-Date: 2016-10-26 00:35+0300\n"
-"PO-Revision-Date: 2018-07-08 23:03+0200\n"
+"PO-Revision-Date: 2019-03-30 15:53+0100\n"
 "Language-Team: thawtes <thawtes@gmail.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.0.6\n"
+"X-Generator: Poedit 2.2.1\n"
 "X-Poedit-Basepath: .\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "Last-Translator: gorski@hotmail.co.uk\n"
 "Language: hr_HR\n"
 
@@ -57,7 +56,7 @@ msgid "blue"
 msgstr "plava"
 
 msgid "border"
-msgstr "granica"
+msgstr "obrub"
 
 msgid "bottom"
 msgstr "dno"
@@ -251,6 +250,9 @@ msgstr "Boja slova (Italic)"
 msgid "Font color (Regular)"
 msgstr "Boja slova (Regular)"
 
+msgid "Font color (Italic"
+msgstr "Boja slova (Italic)"
+
 msgid "Font size"
 msgstr "Veličina slova"
 
@@ -270,7 +272,7 @@ msgid "Font type (Italic)"
 msgstr "Tip slova (Italic)"
 
 msgid "Font type (Regular)"
-msgstr ""Tip slova (Regular)
+msgstr "Tip slova (Regular)"
 
 msgid "For more details please check search settings"
 msgstr "Provjeri postavke pretrage za više detalja"
@@ -279,10 +281,10 @@ msgid "General settings"
 msgstr "Opće postavke"
 
 msgid "green"
-msgstr "zeleno"
+msgstr "zelena"
 
 msgid "grey"
-msgstr "sivo"
+msgstr "siva"
 
 msgid "Hide delay"
 msgstr "Sakrij zaostajanje"
@@ -366,10 +368,10 @@ msgid "nothing connected"
 msgstr "Ništa nije povezano"
 
 msgid "offset"
-msgstr "Odstupanje"
+msgstr "pomak"
 
 msgid "opaque"
-msgstr "Neprovidno"
+msgstr "neprovidno"
 
 msgid "original"
 msgstr "Original"
@@ -435,10 +437,10 @@ msgid "PTS check delay"
 msgstr "PTS provjera zaostatka"
 
 msgid "purple"
-msgstr "Ljubičasto"
+msgstr "ljubičasta"
 
 msgid "red"
-msgstr "Crveno"
+msgstr "crvena"
 
 msgid "Refresh delay"
 msgstr "Obnovi zaostatak"
@@ -462,7 +464,7 @@ msgid "Reset"
 msgstr "Poništi"
 
 msgid "Reset Defaults"
-msgstr "Vrati na podrazumjevane vrijednosti"
+msgstr "Vrati na zadane postavke"
 
 msgid "reset subtitles delay/fps"
 msgstr "Poništi zaostajanje podnaslova/fps"
@@ -647,9 +649,11 @@ msgstr "Vrijeme podnaslova"
 msgid "Subtitles will be downloaded in"
 msgstr "Podnaslov će biti preuzet u"
 
-msgid "Subtitles with this name already exist\n"
+msgid ""
+"Subtitles with this name already exist\n"
 "Do you want to overwrite them"
-msgstr "Podnaslov ovoga imena već postoji.\n"
+msgstr ""
+"Podnaslov ovoga imena već postoji.\n"
 "Želite li ga ponovo spremiti?"
 
 msgid "Suggestions"
@@ -664,9 +668,11 @@ msgstr "Zamijeni listu"
 msgid "Sync delay"
 msgstr "Zaostatak sinkronizacije"
 
-msgid "There are more subtitles in unpacked archive\n"
+msgid ""
+"There are more subtitles in unpacked archive\n"
 " please select which one do you want to use"
-msgstr "Ima još podnaslova u neraspakiranoj arhivi.\n"
+msgstr ""
+"Ima još podnaslova u neraspakiranoj arhivi.\n"
 " Koji želiš koristiti?"
 
 msgid "There was an error while removing subtitle, please check log"
@@ -697,7 +703,7 @@ msgid "Type"
 msgstr "Tip"
 
 msgid "Type text of picture"
-msgstr ""Tip teksta slike"
+msgstr "\"Tip teksta slike"
 
 msgid "unknown"
 msgstr "Nepoznato"
@@ -711,9 +717,11 @@ msgstr "Greška raspakiravanja: arhiva se ne da otvoriti"
 msgid "Update"
 msgstr "Ažuriranje"
 
-msgid "Update search parameters if not correct\n"
+msgid ""
+"Update search parameters if not correct\n"
 " and press green button for search"
-msgstr "Ažuriraj parametre pretrage ako nije korektno\n"
+msgstr ""
+"Ažuriraj parametre pretrage ako nije korektno\n"
 " i stisni zeleno dugme da pretražiš"
 
 msgid "Update Search params"
@@ -735,7 +743,7 @@ msgid "watch DVB broadcast with subtitles"
 msgstr "Gledaj DVB program sa podnaslovom"
 
 msgid "white"
-msgstr "Bijelo"
+msgstr "bijela"
 
 msgid "will be removed from file system"
 msgstr "Bit će uklonjeno iz datotečnog sistema"
@@ -747,7 +755,7 @@ msgid "Year"
 msgstr "Godina"
 
 msgid "yellow"
-msgstr "Žuto"
+msgstr "žuta"
 
 msgid "yes"
 msgstr "Da"
