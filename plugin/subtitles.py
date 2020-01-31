@@ -1556,7 +1556,10 @@ class SubsEngine(object):
                 self.__seek = service.seek()
         except Exception:
             return
-        r = self.__seek.getPlayPosition()
+        try:
+            r = self.__seek.getPlayPosition()
+        except:
+            return
         if r[0]:
             self.__pts = None
         else:
