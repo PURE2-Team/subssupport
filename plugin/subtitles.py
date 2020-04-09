@@ -24,6 +24,8 @@ import re
 import sys
 from threading import Thread
 import traceback
+import urllib
+from urllib2 import quote
 from twisted.internet.defer import Deferred
 from twisted.web import client
 
@@ -3295,7 +3297,7 @@ class Suggestions(object):
 
 class OpenSubtitlesSuggestions(Suggestions):
     def _getSuggestions(self, queryString):
-        query = "http://www.opensubtitles.org/libs/suggest.php?format=json2&SubLanguageID=null&MovieName=" + queryString
+        query = "http://www.opensubtitles.org/libs/suggest.php?format=json2&SubLanguageID=null&MovieName=" + quote(queryString)
         return client.getPage(query, timeout=6)
 
     def _processResult(self, data):
@@ -4058,6 +4060,8 @@ class SubsSearch(Screen):
         self.searchExpression = searchTitles[0]
         self.searchTitles = searchTitles
         self.filepath = filepath
+        if self.filepath:
+            self.filepath = urllib.unquote(self.filepath)
         self.isLocalFilepath = filepath and os.path.isfile(filepath) or False
         self.searchTitle = searchSettings.title
         self.searchType = searchSettings.type
