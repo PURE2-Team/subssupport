@@ -1,8 +1,10 @@
 # -*- coding: utf-8 -*-
 
-import urllib2
+import urllib2, requests
 import re
 from ..utilities import log as _log
+
+ses = requests.Session()
 
 LANGUAGES = (
     ("Albanian", "29", "sq", "alb", "0", 30201),
@@ -18,6 +20,7 @@ LANGUAGES = (
     ("Dutch", "23", "nl", "dut", "10", 30211),
     ("English", "2", "en", "eng", "11", 30212),
     ("Estonian", "20", "et", "est", "12", 30213),
+    ("Persian", "52", "fa", "per", "13", 30247),
     ("Finnish", "31", "fi", "fin", "14", 30214),
     ("French", "8", "fr", "fre", "15", 30215),
     ("German", "5", "de", "ger", "16", 30216),
@@ -57,10 +60,10 @@ LANGUAGES = (
     ("Portuguese (Brazil)", "48", "pb", "pob", "33", 30234),
     ("Portuguese-BR", "48", "pb", "pob", "33", 30234),
     ("Brazilian", "48", "pb", "pob", "33", 30234),
-    ("Espanol (Latinoamerica)", "28", "es", "spa", "100", 30240),
-    ("Espanol (Espana)", "28", "es", "spa", "100", 30240),
+    ("Español (Latinoamérica)", "28", "es", "spa", "100", 30240),
+    ("Español (España)", "28", "es", "spa", "100", 30240),
     ("Spanish (Latin America)", "28", "es", "spa", "100", 30240),
-    ("Espanol", "28", "es", "spa", "100", 30240),
+    ("Español", "28", "es", "spa", "100", 30240),
     ("SerbianLatin", "36", "sr", "scc", "100", 30237),
     ("Spanish (Spain)", "28", "es", "spa", "100", 30240),
     ("Chinese (Traditional)", "17", "zh", "chi", "100", 30207),
@@ -87,18 +90,15 @@ def get_language_info(language):
 def log(module, msg):
     _log(module, msg.encode('utf-8'))
 
-
-def geturl(url):
-    log(__name__, "Getting url: %s" % url)
+def geturl(url1, headers =None, params = None): 
     try:
-        response = urllib2.urlopen(url)
-        content = response.read()
-        #Fix non-unicode characters in movie titles
-        strip_unicode = re.compile("([^-_a-zA-Z0-9!@#%&=,/'\";:~`\$\^\*\(\)\+\[\]\.\{\}\|\?<>\\]+|[^\s]+)")
-        content = strip_unicode.sub('', content)
-        return_url = response.geturl()
-    except:
-        log(__name__, "Failed to get url: %s" % url)
-        content = None
-        return_url = None
-    return content, return_url
+        res = ses.get(url1, headers=headers, verify=False, timeout=5)
+        print 'res.status_code',res.status_code
+        if res.status_code == 200:
+            return res.content
+        e = res.raise_for_status()
+        print('Download error', e)
+        return ''
+    except requests.exceptions.RequestException as e:
+        print('Download error', str(e))
+        return ''
